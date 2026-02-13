@@ -103,6 +103,20 @@ button {
 <script>
 let current = 1;
 let totalPhotos = 15;
+    const photos = [
+"photo13.jpg",
+"photo14.jpg",
+"photo1.jpg",
+"photo2.jpg",
+"photo3.jpg",
+"photo4.jpg",
+"photo5.jpg",
+"photo8.jpg",
+"photo9.jpg",
+"photo.jpg",
+"photo15.jpg"
+];
+
 let slideshowInterval;
 
 function startSlideshow() {
@@ -115,7 +129,7 @@ function startSlideshow() {
             document.getElementById("finalMessage").style.display = "block";
             return;
         }
-        document.getElementById("slideImage").src = "photo" + current + ".jpg";
+        document.getElementById("slideImage").src = photos[current];
         current++;
     }, 800); // 200ms speed (like video)
 }
