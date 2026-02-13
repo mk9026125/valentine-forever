@@ -121,14 +121,14 @@ function startSlideshow() {
     document.getElementById("slideshow").style.display = "block";
 
     slideshowInterval = setInterval(() => {
-        if (current > totalPhotos) {
+        if (current > photos.length) {
             clearInterval(slideshowInterval);
             document.getElementById("finalMessage").style.display = "block";
             return;
         }
         document.getElementById("slideImage").src = photos[current];
         current++;
-    }, 800); // 200ms speed (like video)
+    }, 1500); // 200ms speed (like video)
 }
 
 function moveNoButton(button) {
