@@ -102,6 +102,7 @@ button {
 
 <script>
 let current = 0;
+    let totalPhotos = 9;
     const photos = [
 "photo13.jpg",
 "photo1.jpg",
@@ -121,7 +122,7 @@ function startSlideshow() {
     document.getElementById("slideshow").style.display = "block";
 
     slideshowInterval = setInterval(() => {
-        if (current > photos.length) {
+        if (current > totalPhotos) {
             clearInterval(slideshowInterval);
             document.getElementById("finalMessage").style.display = "block";
             return;
